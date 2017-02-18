@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Welcome</title>
+		<!-- Adding bootstrap files -->
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<!-- Adding self created CSS file -->
+		<link rel="stylesheet" href="css/index.css" type="text/css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+            function animateLogo() {
+                var frames = document.getElementById("animation").children;
+                var frameCount = frames.length;
+                var i = 0;
+                setInterval(function () { 
+                    frames[i % frameCount].style.display = "none";
+                    frames[++i % frameCount].style.display = "block";
+                }, 600);
+            }
+    </script>
+        <script>
+            var toggle = true;
+            function myclick(x) {
+                x.classList.toggle("change");
+                if(toggle){
+                   openNav();
+                }else{
+                   closeNav();
+                }
+                toggle = !toggle;
+            
+            }
+
+        </script>
+        <script type="text/javascript">
+            var mousewheelevt=(/Firefox/i.test(navigator.userAgent))? "DOMMouseScroll" : "mousewheel" //FF doesn't recognize mousewheel as of FF3.x
+            if (document.attachEvent) //if IE (and Opera depending on user setting)
+                document.attachEvent("on"+mousewheelevt, 
+                     function(e){
+                        window.alert(e.detail)
+                })
+            else if (document.addEventListener) //WC3 browsers
+                document.addEventListener(mousewheelevt, 
+                    function(e){
+                        if(e.wheelDelta==-120){
+                            $('html, body').animate({
+                                scrollTop: $("#mainpart").offset().top
+                            }, 500);
+                        }
+                        else if(e.wheelDelta==120){
+                            $('html, body').animate({
+                                scrollTop: $("#main").offset().top
+                            }, 500);
+                    }
+                        
+                    
+                }, true)
+        </script>
+        
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width= "250px";
+                document.getElementById("bar").style.marginRight= "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("bar").style.marginRight= "0";
+            }
+            </script>
+        </head>
+    <body onload="animateLogo()">
+        <table id="main" width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td align="left" valign="top"><img src="images/Kiit%20Logo.png" width="120" height="100" style="display:block;"></td>
+              <td align="center" valign="top"><img src="images/KIIT%20Heading.png" width="350" height="100" style="display:block;"></td>
+            <td align="right" valign="top">
+                <div id="animation">
+                    <img src="images/Elabs%20logo.png" width="120" height="100">
+                    <img src="images/Elabs%20logo%20yellow.png" width="120" height="100">
+                </div>
+              </td>
+            </tr>
+          </table>
+        <!-- start of main content -->
+        
+            <!-- start of carousel-->
+        <div class="container-fluid" id="main">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            </ol>
+
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="images/download.jpg" alt="Android" >
+                </div>
+
+                <div class="item">
+                    <img src="images/download.jpg" alt="Embedded Systems" >
+                </div>
+
+                <div class="item">
+                    <img src="images/download.jpg" alt="Networking" >
+                </div>
+
+                <div class="item">
+                    <img src="images/download.jpg" alt="Communications" >
+                </div>
+
+                <div class="item">
+                    <img src="images/download.jpg" alt="Web Development" >
+                </div>
+
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+            </div>
+            </div>
+        <!-- end of the carousel -->
+    <div id="mainpart">
+        <div  id="bar" class="container" onclick="myclick(this);">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <!-- start of navbar-->
+        <div id="mySidenav" class="sidenav">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+    </div>
+        <!--end of main content-->
+        
+    </body>
+</html>
