@@ -1,5 +1,5 @@
 body {
-    background-color: #292424;
+    background-color: lightsteelblue;
     overflow: hidden;
 }
 
@@ -118,29 +118,4 @@ img{
 #disclaimer{
     font-family: sans-serif
     font-size: 18px;
-}
-#btleft{
-    background-color: azure;
-    height: 20px;
-    width: 20px;
-}
-#btright{
-    background-color: azure;
-    height: 20px;
-    width: 20px;
-}
-#bbleft{
-    background-color: azure;
-    height: 20px;
-    width: 20px;
-}
-#bbright{
-    background-color: azure;
-    height: 20px;
-    width: 20px;
-}
-#bmiddle{
-    background-color: azure;
-    height: 20px;
-    width: 20px;
 }

@@ -1,0 +1,145 @@
+#container {
+    position: relative;
+}
+
+.image {
+    opacity: 1;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border-style: double;
+    border-bottom-color: white;
+    border-right-color: dimgray;
+    border-left-color: dimgray;
+    border-top-color: white;
+    border-width: 5px;
+    transition: 1s ease;
+    box-shadow: 10px 10px 7px #000;
+}
+
+
+.overlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    right: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.overlay3 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 1s ease;
+}
+
+.overlay4 {
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    right: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: 1s ease;
+}
+
+#container:hover .overlay2 {
+    width: 15%;
+    left: 20%;
+    transform: scale(1.1);
+}
+
+#container:hover .overlay3 {
+    width: 22.5%;
+    left: 0%;
+    transform: scale(1.1);
+}
+
+#container:hover .overlay4 {
+    width: 22.5%;
+    left: 0%;
+    transform: scale(1.1);
+}
+
+#container:hover .image{
+    opacity: 0.3;
+    transform: scale(1.1);
+}
+
+#container:hover .middle {
+    opacity: 1;
+}
+
+.text1 {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.middle {  
+    transition: 1s ease;
+    opacity: 0;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+body{
+    background-image: url(images/bg.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+#navimg{
+    border-radius: 50%;
+    backface-visibility: hidden;
+    height: 30px;
+    width: 30px;
+}
+
+#heading{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px #000000;
+    font-family: cursive;
+}
+
+#title{
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-style: oblique;
+}
+
+h3{
+    color: white;
+    font-family: sans-serif;
+    font-family: oblique;
+}
+
+#icon{
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
